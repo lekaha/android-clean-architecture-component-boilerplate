@@ -2,7 +2,6 @@ package com.lekaha.android.boilerplate.ui
 
 import android.app.Activity
 import android.app.Application
-import android.support.v4.BuildConfig
 import com.lekaha.android.boilerplate.ui.injection.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector

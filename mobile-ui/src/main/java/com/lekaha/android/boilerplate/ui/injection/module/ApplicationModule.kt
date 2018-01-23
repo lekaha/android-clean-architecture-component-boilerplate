@@ -20,7 +20,7 @@ import com.lekaha.android.boilerplate.domain.repository.BufferooRepository
 import com.lekaha.android.boilerplate.remote.BufferooRemoteImpl
 import com.lekaha.android.boilerplate.remote.BufferooService
 import com.lekaha.android.boilerplate.remote.BufferooServiceFactory
-import org.buffer.android.boilerplate.ui.BuildConfig
+import com.lekaha.android.boilerplate.ui.BuildConfig
 import com.lekaha.android.boilerplate.ui.UiThread
 import com.lekaha.android.boilerplate.ui.injection.scopes.PerApplication
 

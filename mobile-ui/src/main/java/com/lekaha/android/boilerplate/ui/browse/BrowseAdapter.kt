@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import org.buffer.android.boilerplate.ui.R
+import com.lekaha.android.boilerplate.ui.R
 import com.lekaha.android.boilerplate.ui.model.BufferooViewModel
 import javax.inject.Inject
 
