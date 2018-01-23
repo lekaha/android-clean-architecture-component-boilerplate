@@ -10,7 +10,7 @@ import android.support.v7.widget.RecyclerView
 import com.nhaarman.mockito_kotlin.whenever
 import io.reactivex.Single
 import com.lekaha.android.boilerplate.domain.model.Bufferoo
-import org.buffer.android.boilerplate.ui.R
+import com.lekaha.android.boilerplate.ui.R
 import com.lekaha.android.boilerplate.ui.test.TestApplication
 import com.lekaha.android.boilerplate.ui.test.factory.BufferooFactory
 import com.lekaha.android.boilerplate.ui.test.util.RecyclerViewMatcher

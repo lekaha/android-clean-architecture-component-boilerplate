@@ -8,7 +8,7 @@ import com.lekaha.android.boilerplate.cache.db.DbOpenHelper
 import com.lekaha.android.boilerplate.cache.db.constants.BufferooConstants
 import com.lekaha.android.boilerplate.cache.db.mapper.BufferooMapper
 import com.lekaha.android.boilerplate.cache.mapper.BufferooEntityMapper
-import org.buffer.android.boilerplate.cache.model.CachedBufferoo
+import com.lekaha.android.boilerplate.cache.model.CachedBufferoo
 import com.lekaha.android.boilerplate.data.model.BufferooEntity
 import com.lekaha.android.boilerplate.data.repository.BufferooCache
 import javax.inject.Inject

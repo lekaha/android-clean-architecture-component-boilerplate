@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.cache.test.factory
+package com.lekaha.android.boilerplate.cache.test.factory
 
 import java.util.concurrent.ThreadLocalRandom
 

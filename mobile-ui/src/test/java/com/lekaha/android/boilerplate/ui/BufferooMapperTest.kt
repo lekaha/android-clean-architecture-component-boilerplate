@@ -1,7 +1,7 @@
 package com.lekaha.android.boilerplate.ui
 
 import com.lekaha.android.boilerplate.ui.mapper.BufferooMapper
-import org.buffer.android.boilerplate.ui.test.factory.BufferooFactory
+import com.lekaha.android.boilerplate.ui.test.factory.BufferooFactory
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith

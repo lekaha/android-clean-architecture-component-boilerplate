@@ -13,7 +13,7 @@ import javax.inject.Singleton
 class PreferencesHelper @Inject constructor(context: Context) {
 
     companion object {
-        private val PREF_BUFFER_PACKAGE_NAME = "org.buffer.android.boilerplate.preferences"
+        private val PREF_BUFFER_PACKAGE_NAME = "com.lekaha.android.boilerplate.preferences"
 
         private val PREF_KEY_LAST_CACHE = "last_cache"
     }

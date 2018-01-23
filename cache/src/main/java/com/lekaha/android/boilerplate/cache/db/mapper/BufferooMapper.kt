@@ -3,7 +3,7 @@ package com.lekaha.android.boilerplate.cache.db.mapper
 import android.content.ContentValues
 import android.database.Cursor
 import com.lekaha.android.boilerplate.cache.db.Db
-import org.buffer.android.boilerplate.cache.model.CachedBufferoo
+import com.lekaha.android.boilerplate.cache.model.CachedBufferoo
 import javax.inject.Inject
 
 /**
