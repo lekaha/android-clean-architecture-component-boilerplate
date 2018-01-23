@@ -1,12 +1,12 @@
 package com.lekaha.android.boilerplate.cache.db.mapper
 
 import android.database.Cursor
-import org.buffer.android.boilerplate.cache.BuildConfig
+import com.lekaha.android.boilerplate.cache.BuildConfig
 import com.lekaha.android.boilerplate.cache.db.Db
 import com.lekaha.android.boilerplate.cache.db.DbOpenHelper
-import org.buffer.android.boilerplate.cache.model.CachedBufferoo
+import com.lekaha.android.boilerplate.cache.model.CachedBufferoo
 import com.lekaha.android.boilerplate.cache.test.DefaultConfig
-import org.buffer.android.boilerplate.cache.test.factory.BufferooFactory
+import com.lekaha.android.boilerplate.cache.test.factory.BufferooFactory
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith

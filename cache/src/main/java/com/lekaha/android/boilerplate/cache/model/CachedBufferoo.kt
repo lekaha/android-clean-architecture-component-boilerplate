@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.cache.model
+package com.lekaha.android.boilerplate.cache.model
 
 /**
  * Model used solely for the caching of a bufferroo

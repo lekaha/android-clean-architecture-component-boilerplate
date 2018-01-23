@@ -1,7 +1,7 @@
 package com.lekaha.android.boilerplate.cache.mapper
 
-import org.buffer.android.boilerplate.cache.model.CachedBufferoo
-import org.buffer.android.boilerplate.cache.test.factory.BufferooFactory
+import com.lekaha.android.boilerplate.cache.model.CachedBufferoo
+import com.lekaha.android.boilerplate.cache.test.factory.BufferooFactory
 import com.lekaha.android.boilerplate.data.model.BufferooEntity
 import org.junit.Before
 import org.junit.Test

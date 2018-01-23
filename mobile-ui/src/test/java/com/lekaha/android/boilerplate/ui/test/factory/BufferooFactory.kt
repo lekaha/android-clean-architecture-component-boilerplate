@@ -1,7 +1,7 @@
-package org.buffer.android.boilerplate.ui.test.factory
+package com.lekaha.android.boilerplate.ui.test.factory
 
 import com.lekaha.android.boilerplate.presentation.model.BufferooView
-import org.buffer.android.boilerplate.ui.test.factory.DataFactory.Factory.randomUuid
+import com.lekaha.android.boilerplate.ui.test.factory.DataFactory.Factory.randomUuid
 
 /**
  * Factory class for Bufferoo related instances

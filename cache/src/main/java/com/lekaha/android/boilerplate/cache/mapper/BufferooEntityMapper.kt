@@ -1,6 +1,6 @@
 package com.lekaha.android.boilerplate.cache.mapper
 
-import org.buffer.android.boilerplate.cache.model.CachedBufferoo
+import com.lekaha.android.boilerplate.cache.model.CachedBufferoo
 import com.lekaha.android.boilerplate.data.model.BufferooEntity
 import javax.inject.Inject
 

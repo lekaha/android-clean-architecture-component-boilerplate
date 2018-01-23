@@ -6,7 +6,6 @@ import android.support.test.InstrumentationRegistry
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
-import org.buffer.android.boilerplate.ui.injection.component.DaggerTestApplicationComponent
 import com.lekaha.android.boilerplate.ui.injection.component.TestApplicationComponent
 import javax.inject.Inject
 

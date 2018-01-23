@@ -1,8 +1,8 @@
-package org.buffer.android.boilerplate.cache.test.factory
+package com.lekaha.android.boilerplate.cache.test.factory
 
-import org.buffer.android.boilerplate.cache.model.CachedBufferoo
+import com.lekaha.android.boilerplate.cache.model.CachedBufferoo
 import com.lekaha.android.boilerplate.data.model.BufferooEntity
-import org.buffer.android.boilerplate.cache.test.factory.DataFactory.Factory.randomUuid
+import com.lekaha.android.boilerplate.cache.test.factory.DataFactory.Factory.randomUuid
 
 /**
  * Factory class for Bufferoo related instances
