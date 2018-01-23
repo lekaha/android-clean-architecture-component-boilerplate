@@ -8,7 +8,7 @@ import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_browse.*
 import com.lekaha.android.boilerplate.presentation.browse.BrowseBufferoosContract
 import com.lekaha.android.boilerplate.presentation.model.BufferooView
-import org.buffer.android.boilerplate.ui.R
+import com.lekaha.android.boilerplate.ui.R
 import com.lekaha.android.boilerplate.ui.mapper.BufferooMapper
 import javax.inject.Inject
 
