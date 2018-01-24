@@ -32,6 +32,10 @@ ext {
     glideVersion = '4.0.0'
     daggerVersion = '2.11'
     glassfishAnnotationVersion = '10.0-b28'
+    archLifecycle = '1.1.0'
+    roomVersion = '1.1.0-alpha1'
+    autoValue = '1.5'
+    autoValueGson = '0.7.0'
 
     //Testing
     robolectricVersion = '3.4.2'
@@ -47,6 +51,11 @@ ext {
     androidSupportRulesVersion = '1.0.0'
     dexmakerMockitoversion = '2.2.0'
     runnerVersion = '0.5'
+
+    // Instrumentation
+    stetho = '1.5.0'
+    chuck = '1.0.4'
+    leakCanary = '1.5.1'
 
     domainDependencies = [
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
@@ -75,7 +84,17 @@ ext {
             androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
             retrofit:           "com.squareup.retrofit2:retrofit:${retrofitVersion}",
             retrofitConverter:  "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
-            retrofitAdapter:    "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+            retrofitAdapter:    "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+
+            // architecture component
+            archLifecycleRuntime        : "android.arch.lifecycle:runtime:${archLifecycle}",
+            archLifecycleExtensions     : "android.arch.lifecycle:extensions:${archLifecycle}",
+            archLifecycleReactiveStreams: "android.arch.lifecycle:reactivestreams:${archLifecycle}",
+            archLifecycleCompiler       : "android.arch.lifecycle:compiler:${archLifecycle}",
+
+            roomRuntime                 : "android.arch.persistence.room:runtime:${roomVersion}",
+            roomCompiler                : "android.arch.persistence.room:compiler:${roomVersion}",
+            roomTesting                 : "android.arch.persistence.room:testing:${roomVersion}",
     ]
 
     presentationTestDependencies = [
@@ -180,7 +199,13 @@ ext {
             timber:             "com.jakewharton.timber:timber:${timberVersion}",
             daggerSupport:      "com.google.dagger:dagger-android-support:${daggerVersion}",
             daggerProcessor:    "com.google.dagger:dagger-android-processor:${daggerVersion}",
-            glassfishAnnotation: "org.glassfish:javax.annotation:${glassfishAnnotationVersion}"
+            glassfishAnnotation: "org.glassfish:javax.annotation:${glassfishAnnotationVersion}",
+
+            // architecture component
+            archLifecycleRuntime        : "android.arch.lifecycle:runtime:${archLifecycle}",
+            archLifecycleExtensions     : "android.arch.lifecycle:extensions:${archLifecycle}",
+            archLifecycleReactiveStreams: "android.arch.lifecycle:reactivestreams:${archLifecycle}",
+            archLifecycleCompiler       : "android.arch.lifecycle:compiler:${archLifecycle}",
     ]
 
     mobileUiTestDependencies = [
@@ -196,6 +221,20 @@ ext {
             espressoContrib:    "com.android.support.test.espresso:espresso-contrib:${espressoVersion}",
             androidRunner:      "com.android.support.test:runner:${runnerVersion}",
             androidRules:       "com.android.support.test:rules:${runnerVersion}"
+    ]
+
+    developmentDependencies = [
+            leakcanary:         "com.squareup.leakcanary:leakcanary-android:${leakCanary}",
+            leakcanaryNoOp:     "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanary}",
+
+            stetho:             "com.facebook.stetho:stetho:${stetho}",
+            stethoOkHttp:       "com.facebook.stetho:stetho-okhttp3:${stetho}",
+
+            chuck:              "com.readystatesoftware.chuck:library:${chuck}",
+            chuckNoOp:          "com.readystatesoftware.chuck:library-no-op:${chuck}",
+
+            autoValue:          "com.google.auto.value:auto-value:${autoValue}",
+            autoValueGson:      "com.ryanharter.auto.value:auto-value-gson:${autoValueGson}",
     ]
 
 }
