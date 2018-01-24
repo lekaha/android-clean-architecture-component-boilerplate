@@ -92,6 +92,12 @@ dependencies {
     kapt mobileUiDependencies.daggerProcessor
     compileOnly mobileUiDependencies.glassfishAnnotation
 
+    api mobileUiDependencies.archLifecycleRuntime
+    api mobileUiDependencies.archLifecycleExtensions
+    api mobileUiDependencies.archLifecycleReactiveStreams
+    kapt mobileUiDependencies.archLifecycleCompiler
+    testAnnotationProcessor mobileUiDependencies.archLifecycleCompiler
+
     // Instrumentation test dependencies
     androidTestImplementation mobileUiTestDependencies.junit
     androidTestImplementation mobileUiTestDependencies.mockito
