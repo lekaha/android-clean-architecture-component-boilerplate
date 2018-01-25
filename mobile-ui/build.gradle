@@ -63,6 +63,7 @@ configurations.all {
 dependencies {
     def mobileUiDependencies = rootProject.ext.mobileUiDependencies
     def mobileUiTestDependencies = rootProject.ext.mobileUiTestDependencies
+    def developmentDependencies = rootProject.ext.developmentDependencies
 
     implementation project(':presentation')
     implementation project(':data')
@@ -96,7 +97,19 @@ dependencies {
     api mobileUiDependencies.archLifecycleExtensions
     api mobileUiDependencies.archLifecycleReactiveStreams
     kapt mobileUiDependencies.archLifecycleCompiler
-    testAnnotationProcessor mobileUiDependencies.archLifecycleCompiler
+    kaptTest mobileUiDependencies.archLifecycleCompiler
+
+    // Auto-Value
+    compileOnly developmentDependencies.autoValue
+    annotationProcessor developmentDependencies.autoValue
+    testAnnotationProcessor developmentDependencies.autoValue
+    androidTestAnnotationProcessor developmentDependencies.autoValue
+
+    // AutoValue Type Adapter
+    compileOnly developmentDependencies.autoValueGson
+    annotationProcessor developmentDependencies.autoValueGson
+    testAnnotationProcessor developmentDependencies.autoValueGson
+    androidTestAnnotationProcessor developmentDependencies.autoValueGson
 
     // Instrumentation test dependencies
     androidTestImplementation mobileUiTestDependencies.junit

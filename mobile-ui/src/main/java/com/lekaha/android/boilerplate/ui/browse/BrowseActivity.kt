@@ -1,18 +1,37 @@
 package com.lekaha.android.boilerplate.ui.browse
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import dagger.android.AndroidInjection
-import kotlinx.android.synthetic.main.activity_browse.*
 import com.lekaha.android.boilerplate.presentation.browse.BrowseBufferoosContract
 import com.lekaha.android.boilerplate.presentation.model.BufferooView
+import com.lekaha.android.boilerplate.ui.BaseInjectingActivity
+import com.lekaha.android.boilerplate.ui.BufferooApplication
 import com.lekaha.android.boilerplate.ui.R
+import com.lekaha.android.boilerplate.ui.R.id.progress
+import com.lekaha.android.boilerplate.ui.R.id.recycler_browse
+import com.lekaha.android.boilerplate.ui.injection.module.ActivityBindingModule_BindMainActivity
 import com.lekaha.android.boilerplate.ui.mapper.BufferooMapper
+import dagger.android.AndroidInjection
 import javax.inject.Inject
 
-class BrowseActivity: AppCompatActivity(), BrowseBufferoosContract.View {
+class BrowseActivity:
+        BaseInjectingActivity<ActivityBindingModule_BindMainActivity.BrowseActivitySubcomponent>(),
+        BrowseBufferoosContract.View {
+
+    override fun createComponent(): ActivityBindingModule_BindMainActivity.BrowseActivitySubcomponent {
+        var app = BufferooApplication::class.java.cast(application)
+//        app.
+//        BrowseActivityModule()
+    }
+
+    override fun onInject(component: ActivityBindingModule_BindMainActivity.BrowseActivitySubcomponent) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getLayoutId(): Int {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     @Inject lateinit var onboardingPresenter: BrowseBufferoosContract.Presenter
     @Inject lateinit var browseAdapter: BrowseAdapter
