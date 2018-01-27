@@ -30,4 +30,7 @@ This is variant of [Android Clean Architecture Boilerplate](https://github.com/b
 
 ## Thanks
 
-- Android Clean Architecture Boilerplate
+- https://github.com/bufferapp/android-clean-architecture-boilerplate
+- https://github.com/n26/N26AndroidSamples
+- https://github.com/erikcaffrey/Android-Architecture-Components-Kotlin
+- https://github.com/google/dagger/issues/900
