@@ -1,10 +1,10 @@
-package com.lekaha.android.boilerplate.ui.browse
+package com.lekaha.android.boilerplate.ui
 
 import android.os.Bundle
 import android.support.annotation.LayoutRes
-import android.support.v7.app.AppCompatActivity
+import dagger.android.support.DaggerAppCompatActivity
 
-open abstract class BaseActivity: AppCompatActivity() {
+abstract class BaseActivity: DaggerAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(getLayoutId())

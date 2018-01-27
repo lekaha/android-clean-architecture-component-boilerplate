@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class TestApplication: Application(), HasActivityInjector {
 
-    @Inject lateinit var injector: DispatchingAndroidInjector<Activity>
+    /*@Inject*/ lateinit var injector: DispatchingAndroidInjector<Activity>
 
     private lateinit var appComponent: TestApplicationComponent
 

@@ -33,7 +33,7 @@ class BrowseViewHolder(view: View): RecyclerView.ViewHolder(view) {
     }
 
 
-    class BrowseViewHolderFactory @Inject constructor(@PerActivity context: Context):
+    class BrowseViewHolderFactory @Inject constructor(context: Context):
             ViewHolderFactory(context) {
 
         override fun createViewHolder(parent: ViewGroup): RecyclerView.ViewHolder

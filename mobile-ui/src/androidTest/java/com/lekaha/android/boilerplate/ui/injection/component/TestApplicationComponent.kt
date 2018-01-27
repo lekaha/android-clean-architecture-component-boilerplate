@@ -6,7 +6,6 @@ import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
 import com.lekaha.android.boilerplate.domain.executor.PostExecutionThread
 import com.lekaha.android.boilerplate.domain.repository.BufferooRepository
-import com.lekaha.android.boilerplate.ui.injection.ApplicationComponent
 import com.lekaha.android.boilerplate.ui.injection.module.ActivityBindingModule
 import com.lekaha.android.boilerplate.ui.injection.module.TestApplicationModule
 import com.lekaha.android.boilerplate.ui.injection.scopes.PerApplication

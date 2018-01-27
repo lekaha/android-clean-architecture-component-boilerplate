@@ -8,8 +8,9 @@ import com.lekaha.android.boilerplate.ui.injection.scopes.PerActivity
 @Module
 abstract class ActivityBindingModule {
 
-    @PerActivity
-    @ContributesAndroidInjector(modules = arrayOf(BrowseActivityModule::class))
+//    @PerActivity
+    @ContributesAndroidInjector(modules =
+        arrayOf(FragmentBindingModule::class))
     abstract fun bindMainActivity(): BrowseActivity
 
 }
