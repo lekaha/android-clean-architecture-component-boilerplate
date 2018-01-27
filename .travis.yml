@@ -32,6 +32,14 @@ android:
     # Specify at least one system image
     - sys-img-armeabi-v7a-android-$EMULATOR_API_LEVEL
 
+licenses:
+  - android-sdk-preview-license-.+
+  - android-sdk-license-.+
+  - google-gdk-license-.+
+
+before_install:
+  - chmod +x gradlew
+
 before_script:
   - echo no | android create avd --force -n test -t android-$EMULATOR_API_LEVEL --abi armeabi-v7a
   - emulator -avd test -no-audio -no-window &
@@ -43,4 +51,4 @@ script:
   - ./gradlew build connectedAndroidTest --stacktrace
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
