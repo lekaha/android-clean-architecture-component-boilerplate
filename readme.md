@@ -1,4 +1,4 @@
-# Android Clean Architecture Component Boilerplate
+# Android Clean Architecture Component Boilerplate [Work in Progress]
 
 Here in this boilerplate is showing how we can leverage Android Architecture Component and Clean Architecture to make Android app. 
 This is variant of [Android Clean Architecture Boilerplate](https://github.com/bufferapp/android-clean-architecture-boilerplate) that is as project starter approaches Clean Architecture and written with Kotlin.
