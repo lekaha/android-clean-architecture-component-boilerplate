@@ -3,15 +3,17 @@ package com.lekaha.android.boilerplate.ui.test
 import android.app.Activity
 import android.app.Application
 import android.support.test.InstrumentationRegistry
+import com.lekaha.android.boilerplate.ui.injection.component.DaggerTestApplicationComponent
+import com.lekaha.android.boilerplate.ui.injection.component.TestApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
-import com.lekaha.android.boilerplate.ui.injection.component.TestApplicationComponent
 import javax.inject.Inject
+
 
 class TestApplication: Application(), HasActivityInjector {
 
-    /*@Inject*/ lateinit var injector: DispatchingAndroidInjector<Activity>
+    @Inject lateinit var injector: DispatchingAndroidInjector<Activity>
 
     private lateinit var appComponent: TestApplicationComponent
 
