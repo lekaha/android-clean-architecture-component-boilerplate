@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lekaha/android-clean-architecture-component-boilerplate.svg?branch=master)](https://travis-ci.org/lekaha/android-clean-architecture-component-boilerplate) [![codecov](https://codecov.io/gh/lekaha/android-clean-architecture-component-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/lekaha/android-clean-architecture-component-boilerplate)
+
 # Android Clean Architecture Component Boilerplate [Work in Progress]
 
 Here in this boilerplate is showing how we can leverage Android Architecture Component and Clean Architecture to make Android app. 
