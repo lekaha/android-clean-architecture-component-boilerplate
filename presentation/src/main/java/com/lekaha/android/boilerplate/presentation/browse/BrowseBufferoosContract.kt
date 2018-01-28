@@ -9,30 +9,11 @@ import com.lekaha.android.boilerplate.presentation.model.BufferooView
  */
 interface BrowseBufferoosContract {
 
-    interface View : BaseView<Presenter> {
-
-        fun showProgress()
-
-        fun hideProgress()
-
-        fun showBufferoos(bufferoos: List<BufferooView>)
-
-        fun hideBufferoos()
-
-        fun showErrorState()
-
-        fun hideErrorState()
-
-        fun showEmptyState()
-
-        fun hideEmptyState()
-
-    }
+    interface View : BaseView<Presenter, List<BufferooView>>
 
     interface Presenter : BasePresenter {
-
+        fun setView(view: View)
         fun retrieveBufferoos()
-
     }
 
 }
