@@ -4,7 +4,7 @@ import com.lekaha.android.boilerplate.domain.interactor.browse.GetBufferoos
 import com.lekaha.android.boilerplate.presentation.browse.BrowseBufferoosContract
 import com.lekaha.android.boilerplate.presentation.browse.BrowseBufferoosPresenter
 import com.lekaha.android.boilerplate.presentation.mapper.BufferooMapper
-import com.lekaha.android.boilerplate.ui.browse.BrowseFragment
+import com.lekaha.android.boilerplate.ui.model.BrowseViewModelFactory
 import dagger.Module
 import dagger.Provides
 
@@ -15,23 +15,13 @@ import dagger.Provides
 @Module
 open class BrowseActivityModule {
 
-//    @PerActivity
-//    @Provides
-//    internal fun provideBrowseView(browseActivity: BrowseActivity): BrowseBufferoosContract.View {
-//        return browseActivity
-//    }
-
-//    @PerActivity
     @Provides
-    internal fun provideBrowsePresenter(mainView: BrowseBufferoosContract.View,
-                                        getBufferoos: GetBufferoos, mapper: BufferooMapper):
+    internal fun provideBrowsePresenter(getBufferoos: GetBufferoos, mapper: BufferooMapper):
             BrowseBufferoosContract.Presenter {
-        return BrowseBufferoosPresenter(mainView, getBufferoos, mapper)
+        return BrowseBufferoosPresenter(getBufferoos, mapper)
     }
 
-//    @PerActivity
     @Provides
-    internal fun provideBrowseView(browseFragment: BrowseFragment): BrowseBufferoosContract.View {
-        return browseFragment
-    }
+    internal fun provideBrowseViewModelFactory(presenter: BrowseBufferoosContract.Presenter)
+            = BrowseViewModelFactory(presenter)
 }

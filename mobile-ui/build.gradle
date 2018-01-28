@@ -89,6 +89,10 @@ dependencies {
 
     testImplementation mobileUiTestDependencies.kotlinJUnit
 
+    implementation mobileUiDependencies.archLifecycleRuntime
+    implementation mobileUiDependencies.archLifecycleExtensions
+    kapt mobileUiDependencies.archLifecycleCompiler
+
     kapt mobileUiDependencies.daggerCompiler
     kapt mobileUiDependencies.daggerProcessor
     compileOnly mobileUiDependencies.glassfishAnnotation
