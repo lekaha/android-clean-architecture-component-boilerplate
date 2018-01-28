@@ -39,14 +39,13 @@ licenses:
 
 before_install:
   - chmod +x gradlew
+  - echo yes | android update sdk --all --filter build-tools-$ANDROID_BUILD_TOOLS_VERSION --no-ui --force
 
-before_script:
-  - echo no | android create avd --force -n test -t android-$EMULATOR_API_LEVEL --abi armeabi-v7a
+script:
+  - echo no | android create avd --force -n test -t android-$EMULATOR_API_LEVEL --abi $ANDROID_ABI
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
-
-script:
   - ./gradlew build
   - ./gradlew build connectedAndroidTest --stacktrace
 
