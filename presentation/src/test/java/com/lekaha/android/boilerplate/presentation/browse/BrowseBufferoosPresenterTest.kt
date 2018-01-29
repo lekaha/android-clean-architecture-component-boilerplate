@@ -1,11 +1,13 @@
 package com.lekaha.android.boilerplate.presentation.browse
 
-import com.nhaarman.mockito_kotlin.*
-import io.reactivex.observers.DisposableSingleObserver
 import com.lekaha.android.boilerplate.domain.interactor.browse.GetBufferoos
 import com.lekaha.android.boilerplate.domain.model.Bufferoo
+import com.lekaha.android.boilerplate.presentation.ViewResponse
 import com.lekaha.android.boilerplate.presentation.mapper.BufferooMapper
+import com.lekaha.android.boilerplate.presentation.model.BufferooView
 import com.lekaha.android.boilerplate.presentation.test.factory.BufferooFactory
+import com.nhaarman.mockito_kotlin.*
+import io.reactivex.observers.DisposableSingleObserver
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -27,27 +29,9 @@ class BrowseBufferoosPresenterTest {
         mockBrowseBufferoosView = mock()
         mockBufferooMapper = mock()
         mockGetBufferoos = mock()
-        browseBufferoosPresenter = BrowseBufferoosPresenter(mockBrowseBufferoosView,
+        browseBufferoosPresenter = BrowseBufferoosPresenter(
                 mockGetBufferoos, mockBufferooMapper)
-    }
-
-    //<editor-fold desc="Retrieve Bufferoos">
-    @Test
-    fun retrieveBufferoosHidesErrorState() {
-        browseBufferoosPresenter.retrieveBufferoos()
-
-        verify(mockGetBufferoos).execute(captor.capture(), eq(null))
-        captor.firstValue.onSuccess(BufferooFactory.makeBufferooList(2))
-        verify(mockBrowseBufferoosView).hideErrorState()
-    }
-
-    @Test
-    fun retrieveBufferoosHidesEmptyState() {
-        browseBufferoosPresenter.retrieveBufferoos()
-
-        verify(mockGetBufferoos).execute(captor.capture(), eq(null))
-        captor.firstValue.onSuccess(BufferooFactory.makeBufferooList(2))
-        verify(mockBrowseBufferoosView).hideEmptyState()
+        browseBufferoosPresenter.setView(mockBrowseBufferoosView)
     }
 
     @Test
@@ -57,44 +41,8 @@ class BrowseBufferoosPresenterTest {
 
         verify(mockGetBufferoos).execute(captor.capture(), eq(null))
         captor.firstValue.onSuccess(bufferoos)
-        verify(mockBrowseBufferoosView).showBufferoos(
-                bufferoos.map { mockBufferooMapper.mapToView(it) })
-    }
-
-    @Test
-    fun retrieveBufferoosShowsEmptyState() {
-        browseBufferoosPresenter.retrieveBufferoos()
-
-        verify(mockGetBufferoos).execute(captor.capture(), eq(null))
-        captor.firstValue.onSuccess(BufferooFactory.makeBufferooList(0))
-        verify(mockBrowseBufferoosView).showEmptyState()
-    }
-
-    @Test
-    fun retrieveBufferoosHidesBufferoos() {
-        browseBufferoosPresenter.retrieveBufferoos()
-
-        verify(mockGetBufferoos).execute(captor.capture(), eq(null))
-        captor.firstValue.onSuccess(BufferooFactory.makeBufferooList(0))
-        verify(mockBrowseBufferoosView).hideBufferoos()
-    }
-
-    @Test
-    fun retrieveBufferoosShowsErrorState() {
-        browseBufferoosPresenter.retrieveBufferoos()
-
-        verify(mockGetBufferoos).execute(captor.capture(), eq(null))
-        captor.firstValue.onError(RuntimeException())
-        verify(mockBrowseBufferoosView).showErrorState()
-    }
-
-    @Test
-    fun retrieveBufferoosHidesBufferoosWhenErrorThrown() {
-        browseBufferoosPresenter.retrieveBufferoos()
-
-        verify(mockGetBufferoos).execute(captor.capture(), eq(null))
-        captor.firstValue.onError(RuntimeException())
-        verify(mockBrowseBufferoosView).hideBufferoos()
+        verify(mockBufferooMapper, times(2)).mapToView(anyVararg<Bufferoo>())
+        verify(mockBrowseBufferoosView).onResponse(anyVararg<ViewResponse<List<BufferooView>>>())
     }
 
     @Test
@@ -103,7 +51,8 @@ class BrowseBufferoosPresenterTest {
 
         verify(mockGetBufferoos).execute(captor.capture(), eq(null))
         captor.firstValue.onError(RuntimeException())
-        verify(mockBrowseBufferoosView).hideEmptyState()
+        verify(mockBufferooMapper, never()).mapToView(anyVararg<Bufferoo>())
+        verify(mockBrowseBufferoosView).onResponse(anyVararg<ViewResponse<List<BufferooView>>>())
     }
     //</editor-fold>
 
