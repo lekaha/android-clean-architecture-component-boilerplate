@@ -4,7 +4,6 @@ import android.app.Application
 import com.lekaha.android.boilerplate.ui.BufferooApplication
 import com.lekaha.android.boilerplate.ui.injection.module.ActivityBindingModule
 import com.lekaha.android.boilerplate.ui.injection.module.ApplicationModule
-import com.lekaha.android.boilerplate.ui.injection.module.FragmentBindingModule
 import com.lekaha.android.boilerplate.ui.injection.scopes.PerApplication
 import dagger.BindsInstance
 import dagger.Component
