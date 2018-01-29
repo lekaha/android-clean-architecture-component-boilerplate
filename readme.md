@@ -6,7 +6,7 @@ Here in this boilerplate is showing how we can leverage Android Architecture Com
 This is variant of [Android Clean Architecture Boilerplate](https://github.com/bufferapp/android-clean-architecture-boilerplate) that is as project starter approaches Clean Architecture and written with Kotlin.
 
 ## Working on
-- [ ] integrate with Android Component architecture 
+- [x] integrate with Android Component architecture 
 - [ ] add instrumentations for helping debugging (Stetho/Chuck/LeakCanary). 
 
 
