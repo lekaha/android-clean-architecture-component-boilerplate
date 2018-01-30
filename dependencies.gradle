@@ -9,7 +9,7 @@ allprojects {
 ext {
     //Android
     androidBuildToolsVersion = "27.0.3"
-    androidMinSdkVersion = 15
+    androidMinSdkVersion = 16
     androidTargetSdkVersion = 26
     androidCompileSdkVersion = 26
 
@@ -54,8 +54,8 @@ ext {
 
     // Instrumentation
     stetho = '1.5.0'
-    chuck = '1.0.4'
-    leakCanary = '1.5.1'
+    chuck = '1.1.0'
+    leakCanary = '1.5.4'
 
     domainDependencies = [
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
