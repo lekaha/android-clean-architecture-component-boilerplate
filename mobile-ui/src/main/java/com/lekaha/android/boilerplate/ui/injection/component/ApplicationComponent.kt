@@ -4,6 +4,7 @@ import android.app.Application
 import com.lekaha.android.boilerplate.ui.BufferooApplication
 import com.lekaha.android.boilerplate.ui.injection.module.ActivityBindingModule
 import com.lekaha.android.boilerplate.ui.injection.module.ApplicationModule
+import com.lekaha.android.boilerplate.ui.injection.module.NetModule
 import com.lekaha.android.boilerplate.ui.injection.scopes.PerApplication
 import dagger.BindsInstance
 import dagger.Component
@@ -13,9 +14,10 @@ import dagger.android.support.AndroidSupportInjectionModule
 
 @PerApplication
 @Component(modules = arrayOf(
-            ActivityBindingModule::class,
-            ApplicationModule::class,
-            AndroidSupportInjectionModule::class))
+        ActivityBindingModule::class,
+        ApplicationModule::class,
+        NetModule::class,
+        AndroidSupportInjectionModule::class))
 interface ApplicationComponent: AndroidInjector<DaggerApplication> {
 
     @Component.Builder

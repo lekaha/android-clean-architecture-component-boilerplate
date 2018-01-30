@@ -2,8 +2,7 @@ package com.lekaha.android.boilerplate.ui.injection.module
 
 import android.app.Application
 import android.content.Context
-import dagger.Module
-import dagger.Provides
+import com.facebook.stetho.Stetho
 import com.lekaha.android.boilerplate.cache.BufferooCacheImpl
 import com.lekaha.android.boilerplate.cache.PreferencesHelper
 import com.lekaha.android.boilerplate.cache.db.DbOpenHelper
@@ -19,10 +18,11 @@ import com.lekaha.android.boilerplate.domain.executor.ThreadExecutor
 import com.lekaha.android.boilerplate.domain.repository.BufferooRepository
 import com.lekaha.android.boilerplate.remote.BufferooRemoteImpl
 import com.lekaha.android.boilerplate.remote.BufferooService
-import com.lekaha.android.boilerplate.remote.BufferooServiceFactory
-import com.lekaha.android.boilerplate.ui.BuildConfig
 import com.lekaha.android.boilerplate.ui.UiThread
 import com.lekaha.android.boilerplate.ui.injection.scopes.PerApplication
+import com.squareup.leakcanary.LeakCanary
+import dagger.Module
+import dagger.Provides
 
 /**
  * Module used to provide dependencies at an application-level.
@@ -30,9 +30,21 @@ import com.lekaha.android.boilerplate.ui.injection.scopes.PerApplication
 @Module
 open class ApplicationModule {
 
+    private fun init(application: Application) {
+        Stetho.initializeWithDefaults(application)
+
+        if (LeakCanary.isInAnalyzerProcess(application)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return
+        }
+        LeakCanary.install(application)
+    }
+
     @Provides
     @PerApplication
     fun provideContext(application: Application): Context {
+        init(application)
         return application
     }
 
@@ -76,11 +88,5 @@ open class ApplicationModule {
     @PerApplication
     internal fun providePostExecutionThread(uiThread: UiThread): PostExecutionThread {
         return uiThread
-    }
-
-    @Provides
-    @PerApplication
-    internal fun provideBufferooService(): BufferooService {
-        return BufferooServiceFactory.makeBuffeoorService(BuildConfig.DEBUG)
     }
 }

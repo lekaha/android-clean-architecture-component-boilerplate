@@ -87,6 +87,13 @@ dependencies {
     implementation mobileUiDependencies.dagger
     implementation mobileUiDependencies.daggerSupport
 
+    releaseImplementation developmentDependencies.chuckNoOp
+    debugImplementation developmentDependencies.chuck
+    implementation developmentDependencies.stetho
+    implementation developmentDependencies.stethoOkHttp
+    releaseImplementation developmentDependencies.leakcanaryNoOp
+    debugImplementation developmentDependencies.leakcanary
+
     testImplementation mobileUiTestDependencies.kotlinJUnit
 
     implementation mobileUiDependencies.archLifecycleRuntime
@@ -143,4 +150,19 @@ dependencies {
 
     kaptTest mobileUiDependencies.daggerCompiler
     kaptAndroidTest mobileUiDependencies.daggerCompiler
+}
+
+// Ensure the no-op dependency is always used in JVM tests.
+configurations.all { config ->
+    if (config.name.contains('UnitTest') || config.name.contains('AndroidTest')) {
+        config.resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.squareup.leakcanary'
+                    && details.requested.name == 'leakcanary-android') {
+                details.useTarget(
+                        group: details.requested.group,
+                        name: 'leakcanary-android-no-op',
+                        version: details.requested.version)
+            }
+        }
+    }
 }
