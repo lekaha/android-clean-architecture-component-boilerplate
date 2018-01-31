@@ -1,13 +1,13 @@
 [![Build Status](https://travis-ci.org/lekaha/android-clean-architecture-component-boilerplate.svg?branch=master)](https://travis-ci.org/lekaha/android-clean-architecture-component-boilerplate) [![codecov](https://codecov.io/gh/lekaha/android-clean-architecture-component-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/lekaha/android-clean-architecture-component-boilerplate)
 
-# Android Clean Architecture Component Boilerplate [Work in Progress]
+# Android Clean Architecture Component Boilerplate
 
 Here in this boilerplate is showing how we can leverage Android Architecture Component and Clean Architecture to make Android app. 
 This is variant of [Android Clean Architecture Boilerplate](https://github.com/bufferapp/android-clean-architecture-boilerplate) that is as project starter approaches Clean Architecture and written with Kotlin.
 
 ## Working on
 - [x] integrate with Android Component architecture 
-- [ ] add instrumentations for helping debugging (Stetho/Chuck/LeakCanary). 
+- [x] add instrumentations for helping debugging (Stetho/Chuck/LeakCanary). 
 
 
 ## Languages, libraries and tools used
