@@ -20,7 +20,7 @@ class BufferooEntityMapperTest {
     @Test
     fun mapFromRemoteMapsData() {
         val bufferooModel = BufferooFactory.makeBufferooModel()
-        val bufferooEntity = bufferooEntityMapper.mapFromRemote(bufferooModel)
+        val bufferooEntity = bufferooEntityMapper.mapToData(bufferooModel)
 
         assertEquals(bufferooModel.name, bufferooEntity.name)
         assertEquals(bufferooModel.title, bufferooEntity.title)

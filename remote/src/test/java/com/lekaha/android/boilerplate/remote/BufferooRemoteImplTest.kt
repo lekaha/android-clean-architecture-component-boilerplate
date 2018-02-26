@@ -40,7 +40,7 @@ class BufferooRemoteImplTest {
         stubBufferooServiceGetBufferoos(Single.just(bufferooResponse))
         val bufferooEntities = mutableListOf<BufferooEntity>()
         bufferooResponse.team.forEach {
-            bufferooEntities.add(entityMapper.mapFromRemote(it))
+            bufferooEntities.add(entityMapper.mapToData(it))
         }
 
         val testObserver = bufferooRemoteImpl.getBufferoos().test()
