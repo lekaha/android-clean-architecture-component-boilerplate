@@ -1,18 +1,17 @@
 package com.lekaha.android.boilerplate.data.source
 
-import io.reactivex.Completable
-import io.reactivex.Single
 import com.lekaha.android.boilerplate.data.model.BufferooEntity
 import com.lekaha.android.boilerplate.data.repository.BufferooDataStore
 import com.lekaha.android.boilerplate.data.repository.BufferooRemote
-import javax.inject.Inject
+import io.reactivex.Completable
+import io.reactivex.Single
 
 /**
  * Implementation of the [BufferooDataStore] interface to provide a means of communicating
  * with the remote data source
  */
-open class BufferooRemoteDataStore @Inject constructor(private val bufferooRemote: BufferooRemote) :
-        BufferooDataStore {
+open class BufferooRemoteDataStore constructor(private val bufferooRemote: BufferooRemote) :
+    BufferooDataStore {
 
     override fun clearBufferoos(): Completable {
         throw UnsupportedOperationException()

@@ -1,16 +1,16 @@
 package com.lekaha.android.boilerplate.presentation.browse
 
-import io.reactivex.observers.DisposableSingleObserver
 import com.lekaha.android.boilerplate.domain.interactor.SingleUseCase
 import com.lekaha.android.boilerplate.domain.model.Bufferoo
 import com.lekaha.android.boilerplate.presentation.ViewResponse
 import com.lekaha.android.boilerplate.presentation.mapper.BufferooMapper
-import javax.inject.Inject
+import io.reactivex.observers.DisposableSingleObserver
 
-class BrowseBufferoosPresenter
-        @Inject constructor(val getBufferoosUseCase: SingleUseCase<List<Bufferoo>, Void>,
-                                                   val bufferooMapper: BufferooMapper):
-        BrowseBufferoosContract.Presenter {
+class BrowseBufferoosPresenter constructor(
+    val getBufferoosUseCase: SingleUseCase<List<Bufferoo>, Void>,
+    val bufferooMapper: BufferooMapper
+) :
+    BrowseBufferoosContract.Presenter {
 
     var browseView: BrowseBufferoosContract.View? = null
 
@@ -37,7 +37,7 @@ class BrowseBufferoosPresenter
         }))
     }
 
-    inner class BufferooSubscriber: DisposableSingleObserver<List<Bufferoo>>() {
+    inner class BufferooSubscriber : DisposableSingleObserver<List<Bufferoo>>() {
 
         override fun onSuccess(t: List<Bufferoo>) {
             handleGetBufferoosSuccess(t)

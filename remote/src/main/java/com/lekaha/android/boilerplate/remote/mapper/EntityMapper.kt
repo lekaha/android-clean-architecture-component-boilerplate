@@ -7,8 +7,8 @@ package com.lekaha.android.boilerplate.remote.mapper
  * @param <M> the remote model input type
  * @param <E> the entity model output type
  */
-interface EntityMapper<in M, out E> {
+interface EntityMapper<M, E> {
+    fun mapToData(type: M): E
 
-    fun mapFromRemote(type: M): E
-
+    fun mapFromData(type: E): M
 }
