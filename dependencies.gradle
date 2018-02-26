@@ -14,8 +14,7 @@ ext {
     androidCompileSdkVersion = 26
 
     //Libraries
-    kotlinVersion = '1.1.51'
-    butterKnifeVersion = '7.0.1'
+    kotlinVersion = '1.2.21'
     recyclerViewVersion = '21.0.3'
     rxJavaVersion = '2.0.2'
     rxKotlinVersion = '2.1.0'
@@ -36,6 +35,8 @@ ext {
     roomVersion = '1.1.0-alpha1'
     autoValue = '1.5'
     autoValueGson = '0.7.0'
+    autoValueAnnotation = autoValue
+    ktxVersion = '0.1'
 
     //Testing
     robolectricVersion = '3.4.2'
@@ -206,6 +207,9 @@ ext {
             archLifecycleExtensions     : "android.arch.lifecycle:extensions:${archLifecycle}",
             archLifecycleReactiveStreams: "android.arch.lifecycle:reactivestreams:${archLifecycle}",
             archLifecycleCompiler       : "android.arch.lifecycle:compiler:${archLifecycle}",
+
+            // KTX
+            ktx:                "androidx.core:core-ktx:${ktxVersion}",
     ]
 
     mobileUiTestDependencies = [
@@ -235,6 +239,9 @@ ext {
 
             autoValue:          "com.google.auto.value:auto-value:${autoValue}",
             autoValueGson:      "com.ryanharter.auto.value:auto-value-gson:${autoValueGson}",
+
+            autoValueAnnotation:"com.jakewharton.auto.value:auto-value-annotations:${autoValueAnnotation}",
+            gson:               "com.google.code.gson:gson:${gsonVersion}",
     ]
 
 }

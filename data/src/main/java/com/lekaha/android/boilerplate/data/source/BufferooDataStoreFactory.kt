@@ -2,15 +2,15 @@ package com.lekaha.android.boilerplate.data.source
 
 import com.lekaha.android.boilerplate.data.repository.BufferooCache
 import com.lekaha.android.boilerplate.data.repository.BufferooDataStore
-import javax.inject.Inject
 
 /**
  * Create an instance of a BufferooDataStore
  */
-open class BufferooDataStoreFactory @Inject constructor(
-        private val bufferooCache: BufferooCache,
-        private val bufferooCacheDataStore: BufferooCacheDataStore,
-        private val bufferooRemoteDataStore: BufferooRemoteDataStore) {
+open class BufferooDataStoreFactory constructor(
+    private val bufferooCache: BufferooCache,
+    private val bufferooCacheDataStore: BufferooCacheDataStore,
+    private val bufferooRemoteDataStore: BufferooRemoteDataStore
+) {
 
     /**
      * Returns a DataStore based on whether or not there is content in the cache and the cache

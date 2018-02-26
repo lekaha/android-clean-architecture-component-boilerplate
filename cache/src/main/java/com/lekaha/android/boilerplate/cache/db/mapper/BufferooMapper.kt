@@ -4,12 +4,11 @@ import android.content.ContentValues
 import android.database.Cursor
 import com.lekaha.android.boilerplate.cache.db.Db
 import com.lekaha.android.boilerplate.cache.model.CachedBufferoo
-import javax.inject.Inject
 
 /**
  * Maps a [CachedBufferoo] instance to a database entity.
  */
-class BufferooMapper @Inject constructor(): ModelDbMapper<CachedBufferoo> {
+class BufferooMapper : ModelDbMapper<CachedBufferoo> {
 
     /**
      * Construct an instance of [ContentValues] using the given [CachedBufferoo]

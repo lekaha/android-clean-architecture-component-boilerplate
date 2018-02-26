@@ -2,14 +2,13 @@ package com.lekaha.android.boilerplate.data.mapper
 
 import com.lekaha.android.boilerplate.data.model.BufferooEntity
 import com.lekaha.android.boilerplate.domain.model.Bufferoo
-import javax.inject.Inject
 
 
 /**
  * Map a [BufferooEntity] to and from a [Bufferoo] instance when data is moving between
  * this later and the Domain layer
  */
-open class BufferooMapper @Inject constructor(): Mapper<BufferooEntity, Bufferoo> {
+open class BufferooMapper : Mapper<BufferooEntity, Bufferoo> {
 
     /**
      * Map a [BufferooEntity] instance to a [Bufferoo] instance
