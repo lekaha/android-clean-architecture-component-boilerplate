@@ -12,7 +12,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class TestActivityBindingModule {
 
     @ContributesAndroidInjector(
-        modules = [ActivityModule::class]
+        modules = [ActivityModule::class, TestFragmentBindingModule::class]
     )
     abstract fun bindMainActivity(): BrowseActivity
 

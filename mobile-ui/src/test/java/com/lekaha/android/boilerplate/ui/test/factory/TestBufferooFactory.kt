@@ -6,7 +6,7 @@ import com.lekaha.android.boilerplate.ui.test.factory.DataFactory.Factory.random
 /**
  * Factory class for Bufferoo related instances
  */
-class BufferooFactory {
+class TestBufferooFactory {
 
     companion object Factory {
 
