@@ -1,7 +1,7 @@
 package com.lekaha.android.boilerplate.ui
 
 import com.lekaha.android.boilerplate.ui.mapper.BufferooMapper
-import com.lekaha.android.boilerplate.ui.test.factory.BufferooFactory
+import com.lekaha.android.boilerplate.ui.test.factory.TestBufferooFactory
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -20,7 +20,7 @@ class BufferooMapperTest {
 
     @Test
     fun mapToViewMapsData() {
-        val bufferooView = BufferooFactory.makeBufferooView()
+        val bufferooView = TestBufferooFactory.makeBufferooView()
         val bufferooViewModel = bufferooMapper.mapToViewModel(bufferooView)
 
         assertEquals(bufferooView.name, bufferooViewModel.name)

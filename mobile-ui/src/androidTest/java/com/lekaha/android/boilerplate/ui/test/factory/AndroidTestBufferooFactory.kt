@@ -5,7 +5,7 @@ import com.lekaha.android.boilerplate.domain.model.Bufferoo
 /**
  * Factory class for Bufferoo related instances
  */
-class BufferooFactory {
+class AndroidTestBufferooFactory {
 
     companion object Factory {
 
@@ -18,8 +18,10 @@ class BufferooFactory {
         }
 
         fun makeBufferooModel(): Bufferoo {
-            return Bufferoo(DataFactory.randomUuid(), DataFactory.randomUuid(),
-                    DataFactory.randomUuid())
+            return Bufferoo(
+                DataFactory.randomUuid(), DataFactory.randomUuid(),
+                DataFactory.randomUuid()
+            )
         }
 
     }

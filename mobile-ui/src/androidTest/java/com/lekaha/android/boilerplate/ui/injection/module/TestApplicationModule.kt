@@ -2,9 +2,6 @@ package com.lekaha.android.boilerplate.ui.injection.module
 
 import android.app.Application
 import android.content.Context
-import com.nhaarman.mockito_kotlin.mock
-import dagger.Module
-import dagger.Provides
 import com.lekaha.android.boilerplate.cache.PreferencesHelper
 import com.lekaha.android.boilerplate.data.executor.JobExecutor
 import com.lekaha.android.boilerplate.data.repository.BufferooCache
@@ -16,6 +13,9 @@ import com.lekaha.android.boilerplate.remote.BufferooService
 import com.lekaha.android.boilerplate.ui.UiThread
 import com.lekaha.android.boilerplate.ui.injection.qualifier.ApplicationContext
 import com.lekaha.android.boilerplate.ui.injection.scopes.PerApplication
+import com.nhaarman.mockito_kotlin.mock
+import dagger.Module
+import dagger.Provides
 
 @Module
 class TestApplicationModule {
