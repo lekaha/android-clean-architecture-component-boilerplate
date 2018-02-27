@@ -23,51 +23,35 @@ class TestApplicationModule {
     @Provides
     @PerApplication
     @ApplicationContext
-    fun provideContext(application: Application): Context {
-        return application
-    }
+    fun provideContext(application: Application): Context = application
 
     @Provides
     @PerApplication
-    internal fun providePreferencesHelper(): PreferencesHelper {
-        return mock()
-    }
+    internal fun providePreferencesHelper(): PreferencesHelper = mock()
 
     @Provides
     @PerApplication
-    internal fun provideBufferooRepository(): BufferooRepository {
-        return mock()
-    }
+    internal fun provideBufferooRepository(): BufferooRepository = mock()
 
     @Provides
     @PerApplication
-    internal fun provideBufferooCache(): BufferooCache {
-        return mock()
-    }
+    internal fun provideBufferooCache(): BufferooCache = mock()
 
     @Provides
     @PerApplication
-    internal fun provideBufferooRemote(): BufferooRemote {
-        return mock()
-    }
+    internal fun provideBufferooRemote(): BufferooRemote = mock()
 
     @Provides
     @PerApplication
-    internal fun provideThreadExecutor(jobExecutor: JobExecutor): ThreadExecutor {
-        return jobExecutor
-    }
+    internal fun provideThreadExecutor(jobExecutor: JobExecutor): ThreadExecutor = jobExecutor
 
     @Provides
     @PerApplication
-    internal fun providePostExecutionThread(uiThread: UiThread): PostExecutionThread {
-        return uiThread
-    }
+    internal fun providePostExecutionThread(uiThread: UiThread): PostExecutionThread = uiThread
 
     @Provides
     @PerApplication
-    internal fun provideBufferooService(): BufferooService {
-        return mock()
-    }
+    internal fun provideBufferooService(): BufferooService = mock()
 
     @Provides
     @PerApplication
