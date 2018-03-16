@@ -24,5 +24,6 @@ dependencies {
     testImplementation remoteTestDependencies.mockito
     testImplementation remoteTestDependencies.assertj
 
-    compile project(':data')
+    implementation project(':data')
+    implementation project(':ext')
 }

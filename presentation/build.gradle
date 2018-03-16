@@ -24,5 +24,6 @@ dependencies {
     testImplementation presentationTestDependencies.assertj
     testImplementation presentationTestDependencies.robolectric
 
-    compile project(':domain')
+    implementation project(':domain')
+    implementation project(':ext')
 }
