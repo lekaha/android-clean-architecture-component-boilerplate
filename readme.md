@@ -34,6 +34,15 @@ This is variant of [Android Clean Architecture Boilerplate](https://github.com/b
 * Latest Android SDK Tools and build tools.
 * Android Studio 3.0+
 
+## Change package name
+
+There is a tool that you can use for changing the package name as you like,
+
+```bash
+android-clean-architecture-component-boilerplate$ ./acab_shell package com.lekaha.android.boilerplate [YOUR_PACKAGE_NAME]
+
+```
+
 ## Thanks
 
 - https://github.com/bufferapp/android-clean-architecture-boilerplate
