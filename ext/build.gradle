@@ -1,0 +1,17 @@
+apply plugin: 'kotlin'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    def extDependencies = rootProject.ext.extDependencies
+    def extTestDependencies = rootProject.ext.extTestDependencies
+
+    implementation extDependencies.rxKotlin
+    implementation extDependencies.kotlin
+
+    testImplementation extTestDependencies.junit
+    testImplementation extTestDependencies.kotlinJUnit
+    testImplementation extTestDependencies.mockito
+    testImplementation extTestDependencies.assertj
+}

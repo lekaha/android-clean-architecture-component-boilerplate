@@ -14,7 +14,7 @@ ext {
     androidCompileSdkVersion = 26
 
     //Libraries
-    kotlinVersion = '1.2.21'
+    kotlinVersion = "$kotlin_version"
     recyclerViewVersion = '21.0.3'
     rxJavaVersion = '2.0.2'
     rxKotlinVersion = '2.1.0'
@@ -37,6 +37,8 @@ ext {
     autoValueGson = '0.7.0'
     autoValueAnnotation = autoValue
     ktxVersion = '0.1'
+    modelMapperVersion = '1.1.0'
+    constraintLayoutVersion = '1.0.2'
 
     //Testing
     robolectricVersion = '3.4.2'
@@ -57,6 +59,19 @@ ext {
     stetho = '1.5.0'
     chuck = '1.1.0'
     leakCanary = '1.5.4'
+
+    extDependencies = [
+            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            kotlin  :           "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
+    ]
+
+    extTestDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            kotlinJUnit:        "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
+    ]
 
     domainDependencies = [
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
@@ -201,6 +216,7 @@ ext {
             daggerSupport:      "com.google.dagger:dagger-android-support:${daggerVersion}",
             daggerProcessor:    "com.google.dagger:dagger-android-processor:${daggerVersion}",
             glassfishAnnotation: "org.glassfish:javax.annotation:${glassfishAnnotationVersion}",
+            constriantLayout:   "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
 
             // architecture component
             archLifecycleRuntime        : "android.arch.lifecycle:runtime:${archLifecycle}",
@@ -242,6 +258,8 @@ ext {
 
             autoValueAnnotation:"com.jakewharton.auto.value:auto-value-annotations:${autoValueAnnotation}",
             gson:               "com.google.code.gson:gson:${gsonVersion}",
+
+            modelMapper:        "org.modelmapper:modelmapper:${modelMapperVersion}"
     ]
 
 }
