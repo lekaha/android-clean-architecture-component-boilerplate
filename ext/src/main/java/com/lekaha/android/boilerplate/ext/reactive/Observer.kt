@@ -1,4 +1,4 @@
-package com.playone.mobile.ext.reactive
+package com.lekaha.android.boilerplate.ext.reactive
 
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable

@@ -1,3 +1,3 @@
-package com.playone.mobile.common.exception
+package com.lekaha.android.boilerplate.common.exception
 
 class InvalidPropertyValueException(message: String) : Exception(message)

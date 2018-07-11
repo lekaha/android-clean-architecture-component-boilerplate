@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package com.playone.mobile.ext.reactive
+package com.lekaha.android.boilerplate.ext.reactive
 
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Completable

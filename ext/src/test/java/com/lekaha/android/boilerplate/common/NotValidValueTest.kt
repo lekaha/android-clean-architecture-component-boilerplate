@@ -1,4 +1,4 @@
-package com.playone.mobile.common
+package com.lekaha.android.boilerplate.common
 
 import org.junit.Test
 

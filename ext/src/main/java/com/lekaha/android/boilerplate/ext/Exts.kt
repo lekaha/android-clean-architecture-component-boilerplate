@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package com.playone.mobile.ext
+package com.lekaha.android.boilerplate.ext
 
 inline fun Any?.isNull() = null == this
 
