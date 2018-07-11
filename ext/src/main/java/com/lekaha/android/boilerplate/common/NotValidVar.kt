@@ -1,6 +1,6 @@
-package com.playone.mobile.common
+package com.lekaha.android.boilerplate.common
 
-import com.playone.mobile.common.exception.InvalidPropertyValueException
+import com.lekaha.android.boilerplate.common.exception.InvalidPropertyValueException
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
