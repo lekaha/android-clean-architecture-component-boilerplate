@@ -1,18 +1,14 @@
 package com.lekaha.android.boilerplate.ui.model
 
-import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
 import com.lekaha.android.boilerplate.presentation.ViewResponse
 import com.lekaha.android.boilerplate.presentation.browse.BrowseBufferoosContract
 import com.lekaha.android.boilerplate.presentation.model.BufferooView
 
 class BrowseViewModel(var onboardingPresenter: BrowseBufferoosContract.Presenter)
-    : ViewModel(), LifecycleObserver, BrowseBufferoosContract.View {
+    : BaseViewModel(), BrowseBufferoosContract.View {
 
-    private var isProgressing: MutableLiveData<Boolean> = MutableLiveData()
-    private var occurredError: MutableLiveData<Throwable> = MutableLiveData()
     private var bufferoos: MutableLiveData<List<BufferooView>> = MutableLiveData()
 
     init {
